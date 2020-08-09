@@ -1,0 +1,30 @@
+{
+  "name": "productAPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist/* && tslint -c tslint.json -p    tsconfig.json --fix",
+    "build": "tsc && cp -rf package.json dist/package.json",
+    "prestart": "npm run build",
+    "start": "ts-node .",
+    "dev": "ts-node-dev src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mongoose": "^5.7.36",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.5",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.3"
+  }
+}
